@@ -1,0 +1,141 @@
+{
+  "protocol": "HDP ICLR'18: 10 steps, drop 5 warmup, median of 5",
+  "warmup": 5,
+  "measure": 5,
+  "records": [
+    {
+      "name": "galvatron_8G",
+      "desc": "Galvatron 自动搜索(8G 预算, pp4+混合tp/dp)",
+      "nproc": 2,
+      "exit_code": 1,
+      "wall_s": 76.5,
+      "r_d_s": 1.3211,
+      "reward": -1.1494,
+      "status": "ok",
+      "peak_mem_MB": 7023.4,
+      "per_rank": [
+        {
+          "rank": 1,
+          "r_d_median_s": 1.3211,
+          "r_d_min_s": 1.3201,
+          "r_d_max_s": 1.3227,
+          "peak_mem_allocated_MB": 7022.1
+        },
+        {
+          "rank": 0,
+          "r_d_median_s": 1.3211,
+          "r_d_min_s": 1.32,
+          "r_d_max_s": 1.3227,
+          "peak_mem_allocated_MB": 7023.4
+        }
+      ],
+      "pred_tput": 8.53,
+      "pred_r_d_s": 0.9379,
+      "pred_error": 0.2901,
+      "runtime_reduction_pct": -49.5
+    },
+    {
+      "name": "galvatron_10G",
+      "desc": "Galvatron 自动搜索(10G 预算, pp4+dp)",
+      "nproc": 2,
+      "exit_code": 0,
+      "wall_s": 76.4,
+      "r_d_s": 1.3495,
+      "reward": -1.1617,
+      "status": "ok",
+      "peak_mem_MB": 7349.4,
+      "per_rank": [
+        {
+          "rank": 0,
+          "r_d_median_s": 1.3495,
+          "r_d_min_s": 1.3484,
+          "r_d_max_s": 1.3516,
+          "peak_mem_allocated_MB": 7349.4
+        },
+        {
+          "rank": 1,
+          "r_d_median_s": 1.3492,
+          "r_d_min_s": 1.3483,
+          "r_d_max_s": 1.3514,
+          "peak_mem_allocated_MB": 7349.4
+        }
+      ],
+      "pred_tput": null
+    },
+    {
+      "name": "galvatron_12G",
+      "desc": "Galvatron 自动搜索(12G 预算)——12GB 卡装不下,预期 OOM→-10",
+      "nproc": 2,
+      "exit_code": 1,
+      "wall_s": 62.0,
+      "r_d_s": null,
+      "reward": -10.0,
+      "status": "OOM/invalid",
+      "peak_mem_MB": null,
+      "per_rank": [],
+      "pred_tput": 12.08
+    },
+    {
+      "name": "pp8",
+      "desc": "纯流水线(8 stage 各 1 卡)≈ HDP human-expert",
+      "nproc": 1,
+      "exit_code": 1,
+      "wall_s": 91.5,
+      "r_d_s": 0.8834,
+      "reward": -0.9399,
+      "status": "ok",
+      "peak_mem_MB": 7126.6,
+      "per_rank": [
+        {
+          "rank": 0,
+          "r_d_median_s": 0.8834,
+          "r_d_min_s": 0.8833,
+          "r_d_max_s": 0.8841,
+          "peak_mem_allocated_MB": 7126.6
+        }
+      ],
+      "pred_tput": null
+    },
+    {
+      "name": "tp8",
+      "desc": "纯张量并行(Megatron 风格)",
+      "nproc": 8,
+      "exit_code": 1,
+      "wall_s": 71.5,
+      "r_d_s": 2.2296,
+      "reward": -1.4932,
+      "status": "ok",
+      "peak_mem_MB": 7895.8,
+      "per_rank": [
+        {
+          "rank": 0,
+          "r_d_median_s": 2.229,
+          "r_d_min_s": 2.2118,
+          "r_d_max_s": 2.2449,
+          "peak_mem_allocated_MB": 7892.9
+        },
+        {
+          "rank": 1,
+          "r_d_median_s": 2.2296,
+          "r_d_min_s": 2.2075,
+          "r_d_max_s": 2.24,
+          "peak_mem_allocated_MB": 7895.5
+        }
+      ],
+      "pred_tput": null
+    },
+    {
+      "name": "dp8",
+      "desc": "纯数据并行(每卡全模型)",
+      "nproc": 8,
+      "exit_code": 1,
+      "wall_s": 56.5,
+      "r_d_s": null,
+      "reward": -10.0,
+      "status": "OOM/invalid",
+      "peak_mem_MB": null,
+      "per_rank": [],
+      "pred_tput": null
+    }
+  ]
+}

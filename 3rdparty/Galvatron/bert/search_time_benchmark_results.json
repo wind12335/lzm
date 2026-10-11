@@ -1,0 +1,144 @@
+{
+  "end_to_end": [
+    {
+      "layer_num": 24,
+      "memory_constraint_G": 8,
+      "type": "full",
+      "wall_time_s": 212.43,
+      "exit_code": 0,
+      "optimal_bsz": 8,
+      "predicted_throughput": 13.246659418063777,
+      "log": "/tmp/galvatron_search_bench/search_24L_8G_full.log"
+    },
+    {
+      "layer_num": 48,
+      "memory_constraint_G": 8,
+      "type": "full",
+      "wall_time_s": 139.43,
+      "exit_code": 0,
+      "optimal_bsz": 8,
+      "predicted_throughput": 0.0,
+      "log": "/tmp/galvatron_search_bench/search_48L_8G_full.log"
+    },
+    {
+      "layer_num": 96,
+      "memory_constraint_G": 8,
+      "type": "full",
+      "wall_time_s": 274.83,
+      "exit_code": 0,
+      "optimal_bsz": 8,
+      "predicted_throughput": 0.0,
+      "log": "/tmp/galvatron_search_bench/search_96L_8G_full.log"
+    },
+    {
+      "layer_num": 24,
+      "memory_constraint_G": 8,
+      "type": "dp+tp",
+      "wall_time_s": 47.09,
+      "exit_code": 0,
+      "optimal_bsz": 8,
+      "predicted_throughput": 5.315582199481381,
+      "log": "/tmp/galvatron_search_bench/search_24L_8G_dp+tp.log"
+    },
+    {
+      "layer_num": 48,
+      "memory_constraint_G": 8,
+      "type": "dp+tp",
+      "wall_time_s": 40.83,
+      "exit_code": 0,
+      "optimal_bsz": 8,
+      "predicted_throughput": 0.0,
+      "log": "/tmp/galvatron_search_bench/search_48L_8G_dp+tp.log"
+    },
+    {
+      "layer_num": 96,
+      "memory_constraint_G": 8,
+      "type": "dp+tp",
+      "wall_time_s": 81.98,
+      "exit_code": 0,
+      "optimal_bsz": 8,
+      "predicted_throughput": 0.0,
+      "log": "/tmp/galvatron_search_bench/search_96L_8G_dp+tp.log"
+    },
+    {
+      "layer_num": 24,
+      "memory_constraint_G": 8,
+      "type": "dp+pp",
+      "wall_time_s": 1.08,
+      "exit_code": 0,
+      "optimal_bsz": 8,
+      "predicted_throughput": 13.246659418063777,
+      "log": "/tmp/galvatron_search_bench/search_24L_8G_dp+pp.log"
+    },
+    {
+      "layer_num": 48,
+      "memory_constraint_G": 8,
+      "type": "dp+pp",
+      "wall_time_s": 1.09,
+      "exit_code": 0,
+      "optimal_bsz": 8,
+      "predicted_throughput": 0.0,
+      "log": "/tmp/galvatron_search_bench/search_48L_8G_dp+pp.log"
+    },
+    {
+      "layer_num": 96,
+      "memory_constraint_G": 8,
+      "type": "dp+pp",
+      "wall_time_s": 1.08,
+      "exit_code": 0,
+      "optimal_bsz": 8,
+      "predicted_throughput": 0.0,
+      "log": "/tmp/galvatron_search_bench/search_96L_8G_dp+pp.log"
+    },
+    {
+      "layer_num": 48,
+      "memory_constraint_G": 4,
+      "type": "full",
+      "wall_time_s": 41.56,
+      "exit_code": 0,
+      "optimal_bsz": 8,
+      "predicted_throughput": 0.0,
+      "log": "/tmp/galvatron_search_bench/search_48L_4G_full.log"
+    },
+    {
+      "layer_num": 48,
+      "memory_constraint_G": 16,
+      "type": "full",
+      "wall_time_s": 918.21,
+      "exit_code": 0,
+      "optimal_bsz": 16,
+      "predicted_throughput": 8.16282643916291,
+      "log": "/tmp/galvatron_search_bench/search_48L_16G_full.log"
+    },
+    {
+      "layer_num": 32,
+      "memory_constraint_G": 8,
+      "type": "full",
+      "wall_time_s": 174.44,
+      "exit_code": 0,
+      "optimal_bsz": 8,
+      "predicted_throughput": 8.531885676091084,
+      "log": "/tmp/galvatron_search_bench/search_32L_8G_full.log"
+    }
+  ],
+  "dp_only": [
+    {
+      "layer_num": 24,
+      "bsz": 32,
+      "dp_fit_time_s": 49.933,
+      "feasible": false
+    },
+    {
+      "layer_num": 48,
+      "bsz": 32,
+      "dp_fit_time_s": 99.429,
+      "feasible": false
+    },
+    {
+      "layer_num": 96,
+      "bsz": 32,
+      "dp_fit_time_s": 197.777,
+      "feasible": false
+    }
+  ]
+}

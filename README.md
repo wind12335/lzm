@@ -67,6 +67,29 @@ baseline的实验脚本分别在PaperCode/TransAware/Hierarchical/Trinity/baseli
 | HSDAG | 129.38 |
 | Ours (TransAware) | 104.97 |
 
+## 复现环境与版本
+
+机器：8× NVIDIA Titan V（Volta sm_70, 12GB, PCIe），driver 550.67，CUDA toolkit 11.6。
+
+| conda 环境 | 关键版本 | 跑什么 |
+|---|---|---|
+| `galvatron`（`/data/miniconda/envs/galvatron`） | Python 3.8.20, torch 1.10.2+cu113, transformers 4.16.2（pin tokenizers 0.11.6 + huggingface_hub 0.4.0）, numpy 1.23.5（必须 ≤1.23）, fairscale 0.4.5；HSDAG 另需 torch-scatter 2.0.9 + torch-sparse 0.6.13（cp38 wheel @ `data.pyg.org/whl/torch-1.10.0+cu113`）+ torch-geometric 2.0.4 | TransAware / Galvatron / HSDAG / 真机执行器 |
+| `tf`（`/data/miniconda/envs/tf`） | Python 3.8, tensorflow-cpu 2.13.1, pandas, gensim, fastdtw, joblib, tqdm | Hierarchical/Trinity |
+
+⚠️ 系统 `python` 是旧 torch 环境，永远用全路径；联网装包需 socks 代理
+（`export http_proxy=socks5h://127.0.0.1:10808 ...`）。完整坑位清单见 `docs/统一模型实验执行手册.md` §2/§9。
+
+## 3rdparty（外部方法代码快照）
+
+统一实验依赖两个**外部方法**的代码，已整树入仓（出处/commit/本机改动详见 **`3rdparty/README.md`**）：
+
+| 快照 | 上游 | 版本 |
+|---|---|---|
+| `3rdparty/Galvatron/` | [PKU-DAIR/Hetu-Galvatron](https://github.com/PKU-DAIR/Hetu-Galvatron)（VLDB'23, arXiv 2211.13878） | Hetu commit `3757771` 时代 paper 代码 + 本机重 profile 的 env_configs + bert/ 下新增实验脚本 |
+| `3rdparty/HSDAG/` | [hping666/HSDAG](https://github.com/hping666/HSDAG)（NeurIPS'24 官方实现, arXiv 2405.14185） | commit `9d5caf7` + 新增 `hsdag_unified.py` 适配器（方案 A 算法移植） |
+
+TransAware 与 Trinity 的代码在仓库本体 `PaperCode/` 下（见上方"代码注解"）。
+
 | 文件 | 说明 |
 |---|---|
 | `docs/统一搜索耗时对比_方法讲解.md` | **先读这个**：结果表 + 四方法讲解 + Hierarchical 600s vs 300s 解释 |
@@ -76,4 +99,5 @@ baseline的实验脚本分别在PaperCode/TransAware/Hierarchical/Trinity/baseli
 | `docs/第四基线迁移同步提示词.md` | 新基线接入统一口径的迁移契约 |
 | `docs/对比测试hierarchical和transAware性能_云端原始结果_202512.md` | 云端（K100）原始对比数据（600s vs 300s 解释的数据来源） |
 | `hsdag_unified.py` | HSDAG 适配器归档副本（运行请用 /data/coding/HSDAG/ 下原件） |
+| `3rdparty/` | 外部方法代码快照（Galvatron / HSDAG，见 `3rdparty/README.md`） |
 | `results_titanv_20261011/` | 本轮全部原始日志（含真机 OOM 双验记录） |
