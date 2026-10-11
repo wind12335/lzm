@@ -1,0 +1,44 @@
+[calib] all-on-GPU0 -> 1.810202 s (期望 ~1.81) | 交错放置 -> 1.856919 s | 全放单设备罚 -> 1e+10
+[HSDAG-unified] 搜索开始: 25 episodes x 20 rollouts, n_devs=8
+Episode 0: Average Reward = 0.33114, Best Runtime = 1.81158
+Episode 1: Average Reward = 0.248319, Best Runtime = 1.81158
+Episode 2: Average Reward = 0.22076, Best Runtime = 1.81158
+Episode 3: Average Reward = 0.275961, Best Runtime = 1.81158
+Episode 4: Average Reward = 0.193139, Best Runtime = 1.81158
+Episode 5: Average Reward = 0.11038, Best Runtime = 1.81158
+Episode 6: Average Reward = 0.22076, Best Runtime = 1.81158
+Episode 7: Average Reward = 0.248298, Best Runtime = 1.81158
+Episode 8: Average Reward = 0.0827799, Best Runtime = 1.81158
+Episode 9: Average Reward = 0.220719, Best Runtime = 1.81158
+Episode 10: Average Reward = 0.19316, Best Runtime = 1.81158
+Episode 11: Average Reward = 0.165581, Best Runtime = 1.81158
+Episode 12: Average Reward = 0.30354, Best Runtime = 1.81158
+Episode 13: Average Reward = 0.24834, Best Runtime = 1.81158
+Episode 14: Average Reward = 0.137939, Best Runtime = 1.81158
+Episode 15: Average Reward = 0.248319, Best Runtime = 1.81158
+Episode 16: Average Reward = 0.110338, Best Runtime = 1.81158
+Episode 17: Average Reward = 0.19316, Best Runtime = 1.81158
+Episode 18: Average Reward = 0.220739, Best Runtime = 1.81158
+Episode 19: Average Reward = 0.165539, Best Runtime = 1.81158
+Episode 20: Average Reward = 0.22076, Best Runtime = 1.81158
+Episode 21: Average Reward = 0.220698, Best Runtime = 1.81158
+Episode 22: Average Reward = 0.275982, Best Runtime = 1.81158
+Episode 23: Average Reward = 0.193181, Best Runtime = 1.81158
+Episode 24: Average Reward = 0.165581, Best Runtime = 1.81158
+Training completed. Best runtime: 1.81158, search time: 20.38 s
+[dump] /data/coding/HSDAG/HSDAG_output/best_result_unified.json
+    intermediate_output = self.intermediate(attention_output)
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 427, in forward
+    hidden_states = self.intermediate_act_fn(hidden_states)
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/torch/nn/functional.py", line 1556, in gelu
+    return torch._C._nn.gelu(input)
+RuntimeError: CUDA out of memory. Tried to allocate 80.00 MiB (GPU 7; 11.77 GiB total capacity; 10.12 GiB already allocated; 62.12 MiB free; 10.17 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+
+# ==== 判定（HDP 协议）====
+# 搜索: 20.38 s, 最优模拟估计 1.81158 s, placement GPU 分布 {7:28, 2:7}
+# 真机执行 placement_runner_bert.py --bsz 8 --placement 7,*28,2,*7:
+#   GPU7: 11.77 GiB total, 10.12 GiB allocated, 62.12 MiB free, 申请 80 MiB 失败 → OOM
+#   PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:128 重试: 错误一字不差 → 排除碎片假阳性
+# 结论: r_d = −10 (合法不可行, 同 Trinity/TransAware 判定标准)

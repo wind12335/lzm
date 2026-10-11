@@ -194,6 +194,10 @@ class ImportantOpsSimulator(Simulator):
         self.config_params = config_params
         self.nx_graph = nx_graph
         self.dev_names = ["/GPU:" + str(idx) for idx in range(self.config_params["n_devs"])]
+        # [统一模型实验 2026-10-11] 增强变体开关: 峰值显存是否计入节点持久状态
+        # (模型参数/梯度/优化器状态, 即 nx_graph 节点的 'memory' 属性)。
+        # 原版只统计输出激活张量, 对 BERT 级模型会漏掉 ~10GB 持久状态。
+        self.count_model_states = bool(config_params.get('count_model_states', False))
 
         self.output_memorys = defaultdict(list)
         self.compute_costs = {}
@@ -236,6 +240,17 @@ class ImportantOpsSimulator(Simulator):
             # 峰值 memory 损耗
             if output_memory_utils[dev] > output_memory_peak_utils[dev]:
                 output_memory_peak_utils[dev] = output_memory_utils[dev]
+
+        # [统一模型实验 2026-10-11] 增强变体: 持久状态 (节点 'memory') 视为常驻,
+        # 叠加到各设备峰值上, 使 max_mem 约束/奖励惩罚对模型状态可见。
+        if self.count_model_states:
+            for node_name, node in self.node_dict.items():
+                try:
+                    mem_attr = self.nx_graph.nodes[node_name]['memory']
+                except Exception:
+                    mem_attr = 0
+                dev = self.dev_names.index(node.device)
+                output_memory_peak_utils[dev] += float(mem_attr or 0)
 
         return run_time, start_time, output_memory_peak_utils
 

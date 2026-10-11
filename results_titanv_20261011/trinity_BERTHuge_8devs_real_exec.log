@@ -1,0 +1,42 @@
+[placement] embeddings->2, layer_k->4/0/2......pooler/cls->0/0, 使用 GPU {0,1,2,3,4,6}
+[placement] embeddings(2) 与 cls(0) 不同卡 → 解绑词向量(tie_word_embeddings=False)
+Traceback (most recent call last):
+  File "placement_runner_bert.py", line 192, in <module>
+    main()
+  File "placement_runner_bert.py", line 157, in main
+    outputs = model(input_ids=input_ids, attention_mask=attention_mask,
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 1097, in forward
+    outputs = self.bert(
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 996, in forward
+    encoder_outputs = self.encoder(
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 585, in forward
+    layer_outputs = layer_module(
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "placement_runner_bert.py", line 52, in forward
+    return self.module(*args, **kw)
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 513, in forward
+    layer_output = apply_chunking_to_forward(
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2438, in apply_chunking_to_forward
+    return forward_fn(*input_tensors)
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 525, in feed_forward_chunk
+    intermediate_output = self.intermediate(attention_output)
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/transformers/models/bert/modeling_bert.py", line 426, in forward
+    hidden_states = self.dense(hidden_states)
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 103, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/data/miniconda/envs/galvatron/lib/python3.8/site-packages/torch/nn/functional.py", line 1848, in linear
+    return torch._C._nn.linear(input, weight, bias)
+RuntimeError: CUDA out of memory. Tried to allocate 80.00 MiB (GPU 0; 11.77 GiB total capacity; 10.15 GiB already allocated; 42.12 MiB free; 10.19 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

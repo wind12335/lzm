@@ -1,0 +1,76 @@
+正在读取数据集路径: /data/coding/lzm/PaperCode/TransAware/transaware/datasets/NMT_4layers/nmt_4layers_baseline.pkl
+
+[TransAware] 开始策略搜索...
+[debug] Epoch 0 | runtime=0.954772s | peak_mem=6.1701GB | reward=[-10.046282624630775]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.954772s @epoch 0 | mem=6.1701GB
+[debug] Epoch 1 | runtime=0.756639s | peak_mem=6.1701GB | reward=[-10.27886906]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.756639s @epoch 1 | mem=6.1701GB
+[debug] Epoch 2 | runtime=0.651733s | peak_mem=6.1701GB | reward=[-10.42811979]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.651733s @epoch 2 | mem=6.1701GB
+[debug] Epoch 3 | runtime=0.585416s | peak_mem=6.1701GB | reward=[-10.53543288]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.585416s @epoch 3 | mem=6.1701GB
+[debug] Epoch 4 | runtime=0.539040s | peak_mem=6.1701GB | reward=[-10.61796461]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.539040s @epoch 4 | mem=6.1701GB
+[debug] Epoch 5 | runtime=0.504426s | peak_mem=6.1701GB | reward=[-10.68433417]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.504426s @epoch 5 | mem=6.1701GB
+[debug] Epoch 6 | runtime=0.477386s | peak_mem=6.1701GB | reward=[-10.73942981]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.477386s @epoch 6 | mem=6.1701GB
+[debug] Epoch 7 | runtime=0.455542s | peak_mem=6.1701GB | reward=[-10.78626724]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.455542s @epoch 7 | mem=6.1701GB
+[debug] Epoch 8 | runtime=0.437435s | peak_mem=6.1701GB | reward=[-10.82682618]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.437435s @epoch 8 | mem=6.1701GB
+[debug] Epoch 9 | runtime=0.422118s | peak_mem=6.1701GB | reward=[-10.86246989]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.422118s @epoch 9 | mem=6.1701GB
+[debug] Epoch 10 | runtime=0.408945s | peak_mem=6.1701GB | reward=[-10.89417353]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.408945s @epoch 10 | mem=6.1701GB
+[debug] Epoch 11 | runtime=0.397462s | peak_mem=6.1701GB | reward=[-10.92265658]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.397462s @epoch 11 | mem=6.1701GB
+[debug] Epoch 12 | runtime=0.387336s | peak_mem=6.1701GB | reward=[-10.94846369]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.387336s @epoch 12 | mem=6.1701GB
+[debug] Epoch 13 | runtime=0.378319s | peak_mem=6.1701GB | reward=[-10.97201624]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.378319s @epoch 13 | mem=6.1701GB
+[debug] Epoch 14 | runtime=0.370224s | peak_mem=6.1701GB | reward=[-10.99364632]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.370224s @epoch 14 | mem=6.1701GB
+[debug] Epoch 15 | runtime=0.362903s | peak_mem=6.1701GB | reward=[-11.01361993]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.362903s @epoch 15 | mem=6.1701GB
+[debug] Epoch 16 | runtime=0.356239s | peak_mem=6.1701GB | reward=[-11.0321531]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.356239s @epoch 16 | mem=6.1701GB
+[debug] Epoch 17 | runtime=0.350140s | peak_mem=6.1701GB | reward=[-11.0494235]
+        GPU split : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+        best so far: 0.350140s @epoch 17 | mem=6.1701GB
+==================================================
+[debug] 最优解摘要
+  best_runtime : 0.350140 s  (epoch 17)
+  best_peak_mem: 6.1701 GB
+  nodes        : 1503
+  GPU split    : GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+  cross_edges  : 406  cross_bytes=48184.0
+
+========================================
+【TransAware 策略搜索统计】
+总耗时 (Total Search Time): 24.3078 秒
+========================================
+
+[debug] best_placement nodes: 1503
+[debug] GPU split: GPU0=28  GPU1=2  GPU2=0  GPU3=653  GPU4=4  GPU5=815  GPU6=1  GPU7=0
+
+real	0m25.910s
+user	2m45.991s
+sys	0m58.071s

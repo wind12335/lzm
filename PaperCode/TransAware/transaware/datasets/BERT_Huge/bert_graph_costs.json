@@ -1,0 +1,189 @@
+{
+ "anchor_total_ms": 1810.0,
+ "anchor": "placement_runner naive 4L/GPU 实测 (HDP 协议)",
+ "edge_bytes": 10485760,
+ "bytes_per_param": 16,
+ "nodes": {
+  "embeddings": {
+   "compute_cost_us": 5284,
+   "memory_bytes": 635658240,
+   "memory_MB": 606.2
+  },
+  "layer_0": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_1": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_2": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_3": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_4": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_5": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_6": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_7": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_8": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_9": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_10": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_11": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_12": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_13": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_14": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_15": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_16": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_17": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_18": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_19": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_20": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_21": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_22": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_23": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_24": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_25": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_26": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_27": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_28": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_29": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_30": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "layer_31": {
+   "compute_cost_us": 52841,
+   "memory_bytes": 314572800,
+   "memory_MB": 300.0
+  },
+  "pooler": {
+   "compute_cost_us": 4403,
+   "memory_bytes": 26234880,
+   "memory_MB": 25.0
+  },
+  "cls": {
+   "compute_cost_us": 109404,
+   "memory_bytes": 651813792,
+   "memory_MB": 621.6
+  }
+ },
+ "totals": {
+  "sum_cost_ms": 1810.0,
+  "sum_mem_GB": 10.6,
+  "num_nodes": 35,
+  "num_edges": 34
+ }
+}

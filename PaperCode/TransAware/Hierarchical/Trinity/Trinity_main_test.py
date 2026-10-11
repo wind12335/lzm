@@ -13,6 +13,18 @@ import json
 import argparse
 from tensorflow.core.protobuf import device_properties_pb2
 from tensorflow.python.grappler import cluster
+
+# TF>=2.x 兼容垫片（Titan V 复现补丁 2026-10-11）：
+# TF1 时代的私有 API 在 TF 2.13 (tensorflow-cpu) 中已迁移/移除，这里集中补齐，
+# 使 ColorRL_program / Trinity_program_* / trinity_program_ppo 无需改动即可运行。
+from tensorflow.python.framework import indexed_slices as _tf_indexed_slices
+from tensorflow.python.framework import ops as _tf_ops_mod
+if not hasattr(_tf_ops_mod, 'IndexedSlices'):
+    _tf_ops_mod.IndexedSlices = _tf_indexed_slices.IndexedSlices
+from tensorflow.python.ops import array_ops as _tf_array_ops
+if not hasattr(_tf_array_ops, 'stack'):
+    _tf_array_ops.stack = __import__('tensorflow').stack
+
 from readfile import ReadPickleFile
 from graph_scheduling import GraphScheduling
 from graph_scheduling_base import GraphSchedulingBase

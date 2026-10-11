@@ -44,6 +44,7 @@ CONFIG_PARAMS_KEYS = ['seed', 'n_devs', 'radial_mp', 'sage_sample_ratio',
                       'bl_n_rnds', 'mem_penalty', 'max_mem', 'max_runtime_mem_penalized',
                       'node_traversal_order', 'model_name', 'max_num_outputs',
                       'max_output_size', 'hidden_dim', 'only_graphormer', 'threshold', 'debug_placement',
+                      'count_model_states',
                       'n_rounds']
 
 # 定义模拟执行引擎所需的全局变量
@@ -99,6 +100,9 @@ parser.add_argument('--only_graphormer', type=bool, default=False)
 parser.add_argument('--threshold', type=int, default=1)
 parser.add_argument('--debug_placement', action='store_true',
                     help='打印每轮各 GPU 上的算子数量，用于检查 placement 是否变化')
+parser.add_argument('--count_model_states', action='store_true',
+                    help='[增强变体] 模拟器峰值显存计入节点持久状态(参数/优化器状态), '
+                         '使 max_mem 约束对大模型可见; 默认关闭=原版行为')
 parser.add_argument('--data_path', type=str, default=DEFAULT_DATASETS_DIR,
                     help='数据集根目录（默认指向原 TransAware 的 datasets）')
 
@@ -145,7 +149,9 @@ if config_params['model_name'] == "InceptionV3":
 # 数据集路径：定位到 <data_path>/<model_name>/<pkl>
 data_path = args.data_path
 
-if config_params['model_name'] == "NMT_4layers":
+if config_params['model_name'] == "BERT_Huge":
+    graph_path = os.path.join(data_path, "BERT_Huge", "bert_huge_baseline.pkl")
+elif config_params['model_name'] == "NMT_4layers":
     graph_path = os.path.join(data_path, "NMT_4layers", "nmt_4layers_baseline.pkl")
 elif config_params['model_name'] == "InceptionV3":
     graph_path = os.path.join(data_path, "InceptionV3", "inception_v3_baseline.pkl")
@@ -213,6 +219,22 @@ print(f"总耗时 (Total Search Time): {total_time:.4f} 秒")
 print("=" * 40 + "\n")
 
 best_pl = aware_interface.get_best_placement()
+
+# [统一模型实验 2026-10-11] 将最优 placement 落盘为 JSON (节点名 -> GPU 序号)
+if best_pl:
+    import json as _json
+    _pl_out = {}
+    for _k, _d in best_pl.items():
+        _idx = int(str(_d).split(':')[-1]) if isinstance(_d, str) else int(_d)
+        _pl_out[str(_k)] = _idx
+    _out_dir = config_params.get('output_save_path', './TestAwareOutput')
+    os.makedirs(_out_dir, exist_ok=True)
+    _out_path = os.path.join(_out_dir, 'best_placement_%s_%ddevs.json'
+                             % (config_params['model_name'], config_params['n_devs']))
+    with open(_out_path, 'w') as _f:
+        _json.dump(_pl_out, _f, indent=1)
+    print('[dump] best placement -> %s' % _out_path)
+
 if config_params.get('debug_placement', False):
     placer = aware_interface.progress_placer
     n_devs = config_params['n_devs']

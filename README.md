@@ -54,3 +54,25 @@ baseline的实验脚本分别在PaperCode/TransAware/Hierarchical/Trinity/baseli
 实验3图5.6的结果通过开启两个终端，在一个终端执行时，另一个终端开启nvitop指令监控内存变化，计算内存开销。
 实验4图5.7的结果在PaperCode/FasterTransformer/3rdparty/trt_fused_multihead_attention/qkvToContext.cu第689行。
 实验4图5.8的结果在PaperCode/FasterTransformer/src/fastertransformer/utils/gemm_test/encoder_gemm_func.cc第236行。
+
+# 统一模型对比实验（BERT-Huge @ 8×Titan V，2026-10-11）
+
+四个方法（Trinity / Galvatron / HSDAG / TransAware）在同一张 35 节点 BERT-Huge 统一计算图上
+做策略搜索的对比实验。搜索耗时结果：
+
+| 方法 | 搜索耗时 (s) |
+|---|---|
+| Hierarchical (Trinity) | 679.74 |
+| Galvatron | 174.44 |
+| HSDAG | 129.38 |
+| Ours (TransAware) | 104.97 |
+
+| 文件 | 说明 |
+|---|---|
+| `统一搜索耗时对比_方法讲解.md` | **先读这个**：结果表 + 四方法讲解 + Hierarchical 600s vs 300s 解释 |
+| `run_search_time_comparison.sh` | 一键复现四方法搜索耗时（~18 min，CPU 即可） |
+| `统一模型实验执行手册.md` | 全部实验自助手册（真机执行/步时延/故障排查） |
+| `lzm详细解析与TitanV复现.md` | 深度分析：方法解析、统一实验全记录、模拟器取证（§8） |
+| `第四基线迁移同步提示词.md` | 新基线接入统一口径的迁移契约 |
+| `hsdag_unified.py` | HSDAG 适配器归档副本（运行请用 /data/coding/HSDAG/ 下原件） |
+| `results_titanv_20261011/` | 本轮全部原始日志（含真机 OOM 双验记录） |
