@@ -1,0 +1,1 @@
+python ../../strategy_search.py --model_name "NasNet" --threshold 32

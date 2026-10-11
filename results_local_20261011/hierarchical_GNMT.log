@@ -1,0 +1,54 @@
+=== hierarchical (Trinity, TF2.15.1 venv) hierarchical_test.sh as-is  (2026-10-11 17:04:29) ===
+2026-10-11 17:04:44.727440: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/sim/tf_sim/tf_sim.py:118: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  i = i[1:] if i[0] is '^' else i
+/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/sim/tf_sim/tf_sim.py:191: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  delta = 0 if node.compute_cost is 0 else self.params["delta1"]
+/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/sim/tf_sim/tf_sim.py:235: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if (op is "run_bus" or op is "run_dev") and device_queue[dev].empty():
+/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/sim/tf_sim/tf_sim.py:235: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if (op is "run_bus" or op is "run_dev") and device_queue[dev].empty():
+/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/sim/tf_sim/tf_sim.py:238: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  elif op is "run_bus":
+/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/sim/tf_sim/tf_sim.py:240: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  elif op is "remove_dependency":
+/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/sim/tf_sim/tf_sim.py:243: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  elif op is "run_dev":
+WARNING:tensorflow:From /root/private_data/lzm/tf_venv/lib/python3.11/site-packages/tensorflow/python/compat/v2_compat.py:108: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/sim/tf_sim/tf_rew.py:125: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  i = i[1:] if i[0] is '^' else i
+/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/sim/tf_sim/tf_rew.py:198: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  delta = 0 if node.compute_cost is 0 else self.params["delta1"]
+/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/sim/tf_sim/tf_rew.py:242: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if (op is "run_bus" or op is "run_dev") and device_queue[dev].empty():
+/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/sim/tf_sim/tf_rew.py:242: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if (op is "run_bus" or op is "run_dev") and device_queue[dev].empty():
+/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/sim/tf_sim/tf_rew.py:245: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  elif op is "run_bus":
+/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/sim/tf_sim/tf_rew.py:247: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  elif op is "remove_dependency":
+/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/sim/tf_sim/tf_rew.py:250: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  elif op is "run_dev":
+Traceback (most recent call last):
+  File "/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/Trinity_main_test.py", line 17, in <module>
+    from graph_scheduling import GraphScheduling
+  File "/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/graph_scheduling.py", line 34, in <module>
+    from Trinity import Trinity_program_norml
+  File "/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/../Trinity/Trinity_program_norml.py", line 35, in <module>
+    from Trinity.ge import Node2Vec
+  File "/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/../Trinity/ge/__init__.py", line 1, in <module>
+    from .models import *
+  File "/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/../Trinity/ge/models/__init__.py", line 1, in <module>
+    from .deepwalk import DeepWalk
+  File "/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/../Trinity/ge/models/deepwalk.py", line 20, in <module>
+    from ..walker import RandomWalker
+  File "/root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/Hierarchical/Trinity/../Trinity/ge/walker.py", line 6, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+
+real	1m27.793s
+user	0m3.343s
+sys	0m1.557s

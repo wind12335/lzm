@@ -1,0 +1,7 @@
+# transaware_pytorch（PyTorch 移植版）依赖
+# 目标环境：8x Titan V 机器 / Python 3.8 / torch 1.10
+# 代码兼容性：torch API 面全部为 1.0 时代 API；Python 语法最低要求 3.7（vermin 扫描确认）
+torch>=1.10
+numpy
+networkx
+scipy          # 可选：floyd_warshall 加速

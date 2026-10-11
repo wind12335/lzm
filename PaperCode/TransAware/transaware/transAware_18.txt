@@ -1,0 +1,223 @@
+WARNING:tensorflow:From /work/home/acrlrlzu6q/wangwei/211050065/PaperCode/TransAware/transaware/progressive_placer.py:21: The name tf.disable_eager_execution is deprecated. Please use tf.compat.v1.disable_eager_execution instead.
+
+WARNING:tensorflow:From /work/home/acrlrlzu6q/wangwei/211050065/PaperCode/TransAware/transaware/progressive_placer.py:89: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From /work/home/acrlrlzu6q/wangwei/211050065/PaperCode/TransAware/transaware/progressive_placer.py:93: The name tf.OptimizerOptions is deprecated. Please use tf.compat.v1.OptimizerOptions instead.
+
+WARNING:tensorflow:From /work/home/acrlrlzu6q/wangwei/211050065/PaperCode/TransAware/transaware/progressive_placer.py:96: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2025-12-08 01:51:37.607628: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2025-12-08 01:51:37.627368: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2000074999 Hz
+2025-12-08 01:51:37.630070: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x564d88947860 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2025-12-08 01:51:37.630103: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2025-12-08 01:51:37.632703: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libamdhip64.so
+2025-12-08 01:51:37.818464: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x564d887ef900 initialized for platform ROCM (this does not guarantee that XLA will be used). Devices:
+2025-12-08 01:51:37.818490: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Z100SM, DCU ISA version: gfx906
+2025-12-08 01:51:37.818497: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (1): Z100SM, DCU ISA version: gfx906
+2025-12-08 01:51:37.818503: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (2): Z100SM, DCU ISA version: gfx906
+2025-12-08 01:51:37.818506: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (3): Z100SM, DCU ISA version: gfx906
+2025-12-08 01:51:37.823263: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1650] Found device 0 with properties: 
+name: Z100SM
+DCU ISA: gfx906
+memoryClockRate (GHz) 1.319
+pciBusID 0000:04:00.0
+2025-12-08 01:51:37.823323: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1650] Found device 1 with properties: 
+name: Z100SM
+DCU ISA: gfx906
+memoryClockRate (GHz) 1.319
+pciBusID 0000:26:00.0
+2025-12-08 01:51:37.823363: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1650] Found device 2 with properties: 
+name: Z100SM
+DCU ISA: gfx906
+memoryClockRate (GHz) 1.319
+pciBusID 0000:43:00.0
+2025-12-08 01:51:37.823401: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1650] Found device 3 with properties: 
+name: Z100SM
+DCU ISA: gfx906
+memoryClockRate (GHz) 1.319
+pciBusID 0000:63:00.0
+2025-12-08 01:51:37.827312: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library librocblas.so
+2025-12-08 01:51:37.834865: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libMIOpen.so
+2025-12-08 01:51:37.926444: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libhipfft.so
+2025-12-08 01:51:37.927020: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library librocrand.so
+2025-12-08 01:51:37.927351: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1767] Adding visible gpu devices: 0, 1, 2, 3
+2025-12-08 01:51:37.927393: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1180] Device interconnect StreamExecutor with strength 1 edge matrix:
+2025-12-08 01:51:37.927400: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1186]      0 1 2 3 
+2025-12-08 01:51:37.927408: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 0:   N Y Y Y 
+2025-12-08 01:51:37.927414: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 1:   Y N Y Y 
+2025-12-08 01:51:37.927418: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 2:   Y Y N Y 
+2025-12-08 01:51:37.927422: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 3:   Y Y Y N 
+2025-12-08 01:51:37.927827: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15304 MB memory) -> physical GPU (device: 0, name: Z100SM, pci bus id: 0000:04:00.0)
+2025-12-08 01:51:37.935894: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15304 MB memory) -> physical GPU (device: 1, name: Z100SM, pci bus id: 0000:26:00.0)
+2025-12-08 01:51:37.937558: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 15304 MB memory) -> physical GPU (device: 2, name: Z100SM, pci bus id: 0000:43:00.0)
+2025-12-08 01:51:37.952829: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 15304 MB memory) -> physical GPU (device: 3, name: Z100SM, pci bus id: 0000:63:00.0)
+WARNING:tensorflow:From /work/home/acrlrlzu6q/wangwei/211050065/PaperCode/TransAware/transaware/progressive_placer.py:97: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2025-12-08 01:51:38.018755: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:51:38.054864: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:51:38.085747: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow_core/python/keras/initializers.py:119: calling RandomUniform.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+2025-12-08 01:51:41.537429: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1650] Found device 0 with properties: 
+name: Z100SM
+DCU ISA: gfx906
+memoryClockRate (GHz) 1.319
+pciBusID 0000:04:00.0
+2025-12-08 01:51:41.537525: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1650] Found device 1 with properties: 
+name: Z100SM
+DCU ISA: gfx906
+memoryClockRate (GHz) 1.319
+pciBusID 0000:26:00.0
+2025-12-08 01:51:41.537581: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1650] Found device 2 with properties: 
+name: Z100SM
+DCU ISA: gfx906
+memoryClockRate (GHz) 1.319
+pciBusID 0000:43:00.0
+2025-12-08 01:51:41.537634: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1650] Found device 3 with properties: 
+name: Z100SM
+DCU ISA: gfx906
+memoryClockRate (GHz) 1.319
+pciBusID 0000:63:00.0
+2025-12-08 01:51:41.537709: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library librocblas.so
+2025-12-08 01:51:41.537723: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libMIOpen.so
+2025-12-08 01:51:41.537735: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libhipfft.so
+2025-12-08 01:51:41.537749: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library librocrand.so
+2025-12-08 01:51:41.538121: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1767] Adding visible gpu devices: 0, 1, 2, 3
+2025-12-08 01:51:41.538154: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1180] Device interconnect StreamExecutor with strength 1 edge matrix:
+2025-12-08 01:51:41.538159: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1186]      0 1 2 3 
+2025-12-08 01:51:41.538165: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 0:   N Y Y Y 
+2025-12-08 01:51:41.538169: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 1:   Y N Y Y 
+2025-12-08 01:51:41.538173: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 2:   Y Y N Y 
+2025-12-08 01:51:41.538177: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 3:   Y Y Y N 
+2025-12-08 01:51:41.538602: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15304 MB memory) -> physical GPU (device: 0, name: Z100SM, pci bus id: 0000:04:00.0)
+2025-12-08 01:51:41.538676: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15304 MB memory) -> physical GPU (device: 1, name: Z100SM, pci bus id: 0000:26:00.0)
+2025-12-08 01:51:41.538741: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 15304 MB memory) -> physical GPU (device: 2, name: Z100SM, pci bus id: 0000:43:00.0)
+2025-12-08 01:51:41.538805: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 15304 MB memory) -> physical GPU (device: 3, name: Z100SM, pci bus id: 0000:63:00.0)
+2025-12-08 01:51:41.671085: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:51:42.170130: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:51:42.182482: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library librocblas.so
+WARNING:tensorflow:From /work/home/acrlrlzu6q/wangwei/211050065/PaperCode/TransAware/transaware/LSTM.py:102: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+2025-12-08 01:51:44.963387: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1650] Found device 0 with properties: 
+name: Z100SM
+DCU ISA: gfx906
+memoryClockRate (GHz) 1.319
+pciBusID 0000:04:00.0
+2025-12-08 01:51:44.963473: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1650] Found device 1 with properties: 
+name: Z100SM
+DCU ISA: gfx906
+memoryClockRate (GHz) 1.319
+pciBusID 0000:26:00.0
+2025-12-08 01:51:44.963531: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1650] Found device 2 with properties: 
+name: Z100SM
+DCU ISA: gfx906
+memoryClockRate (GHz) 1.319
+pciBusID 0000:43:00.0
+2025-12-08 01:51:44.963592: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1650] Found device 3 with properties: 
+name: Z100SM
+DCU ISA: gfx906
+memoryClockRate (GHz) 1.319
+pciBusID 0000:63:00.0
+2025-12-08 01:51:44.963661: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library librocblas.so
+2025-12-08 01:51:44.963675: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libMIOpen.so
+2025-12-08 01:51:44.963686: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libhipfft.so
+2025-12-08 01:51:44.963698: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library librocrand.so
+2025-12-08 01:51:44.964039: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1767] Adding visible gpu devices: 0, 1, 2, 3
+2025-12-08 01:51:44.964071: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1180] Device interconnect StreamExecutor with strength 1 edge matrix:
+2025-12-08 01:51:44.964079: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1186]      0 1 2 3 
+2025-12-08 01:51:44.964084: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 0:   N Y Y Y 
+2025-12-08 01:51:44.964089: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 1:   Y N Y Y 
+2025-12-08 01:51:44.964093: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 2:   Y Y N Y 
+2025-12-08 01:51:44.964097: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 3:   Y Y Y N 
+2025-12-08 01:51:44.964517: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15304 MB memory) -> physical GPU (device: 0, name: Z100SM, pci bus id: 0000:04:00.0)
+2025-12-08 01:51:44.964592: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 15304 MB memory) -> physical GPU (device: 1, name: Z100SM, pci bus id: 0000:26:00.0)
+2025-12-08 01:51:44.964656: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 15304 MB memory) -> physical GPU (device: 2, name: Z100SM, pci bus id: 0000:43:00.0)
+2025-12-08 01:51:44.964720: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 15304 MB memory) -> physical GPU (device: 3, name: Z100SM, pci bus id: 0000:63:00.0)
+2025-12-08 01:51:45.512729: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:51:45.832392: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow_core/python/ops/math_grad.py:1424: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2025-12-08 01:51:47.701962: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:51:48.287134: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:51:51.124911: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:51:51.470915: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:51:53.218599: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:51:53.841701: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:51:56.347832: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:51:56.709393: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:51:58.574174: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:51:59.196821: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:01.752317: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:02.131683: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:04.182977: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:04.819566: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:07.377688: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:07.778305: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:09.698545: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:10.336632: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:12.959667: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:13.371519: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:15.356673: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:16.011195: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:18.631891: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:19.064840: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:21.161942: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:21.842695: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:24.676365: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:25.129163: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:27.293574: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:28.013147: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:30.932001: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:31.427897: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:34.031084: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:34.747649: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:37.688289: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:38.193964: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:40.491906: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:41.235213: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:44.201222: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:44.710108: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:47.134507: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:47.915351: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:50.918692: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:51.455255: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:53.916309: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:54.721998: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:57.776446: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:52:58.337238: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:00.852939: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:01.658364: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:04.817573: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:05.398204: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:07.985532: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:08.836439: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:11.964576: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:12.608628: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:15.472359: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:16.334180: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:19.728012: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:20.361309: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:23.091500: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:23.975250: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:27.310859: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:27.974388: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:30.790751: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:31.700192: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:35.104778: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:35.777673: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:38.603465: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+2025-12-08 01:53:39.516329: I tensorflow/core/graph/gpu_fusion_pass.cc:505] ROCm Fusion is enabled.
+正在读取数据集路径: ./datasets/NMT_4layers/nmt_4layers_baseline.pkl
+
+[TransAware] 开始策略搜索...
+
+========================================
+【TransAware 策略搜索统计】
+总耗时 (Total Search Time): 139.5172 秒
+========================================
+

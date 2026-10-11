@@ -1,0 +1,2 @@
+WARNING:tensorflow:From /work/home/acrlrlzu6q/wangwei/211050065/PaperCode/TransAware/transaware/progressive_placer.py:21: The name tf.disable_eager_execution is deprecated. Please use tf.compat.v1.disable_eager_execution instead.
+

@@ -1,0 +1,156 @@
+=== transaware_pytorch NMT_4layers n_devs=4  (本机 py3.11/torch2.7, 2026-10-11 17:04:27) ===
+open hydmilib:libhydmi.so error, reaseon:libhydmi.so: cannot open shared object file: No such file or directory
+正在读取数据集路径: /root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/transaware/datasets/NMT_4layers/nmt_4layers_baseline.pkl
+
+[TransAware] 开始策略搜索...
+[debug] Epoch 0 | runtime=0.674748s | peak_mem=6.1787GB | reward=[-10.393416235853973]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.674748s @epoch 0 | mem=6.1787GB
+[debug] Epoch 1 | runtime=0.534725s | peak_mem=6.1787GB | reward=[-10.62600267]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.534725s @epoch 1 | mem=6.1787GB
+[debug] Epoch 2 | runtime=0.460587s | peak_mem=6.1787GB | reward=[-10.7752534]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.460587s @epoch 2 | mem=6.1787GB
+[debug] Epoch 3 | runtime=0.413720s | peak_mem=6.1787GB | reward=[-10.88256649]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.413720s @epoch 3 | mem=6.1787GB
+[debug] Epoch 4 | runtime=0.380946s | peak_mem=6.1787GB | reward=[-10.96509822]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.380946s @epoch 4 | mem=6.1787GB
+[debug] Epoch 5 | runtime=0.356483s | peak_mem=6.1787GB | reward=[-11.03146778]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.356483s @epoch 5 | mem=6.1787GB
+[debug] Epoch 6 | runtime=0.337374s | peak_mem=6.1787GB | reward=[-11.08656342]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.337374s @epoch 6 | mem=6.1787GB
+[debug] Epoch 7 | runtime=0.321937s | peak_mem=6.1787GB | reward=[-11.13340085]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.321937s @epoch 7 | mem=6.1787GB
+[debug] Epoch 8 | runtime=0.309140s | peak_mem=6.1787GB | reward=[-11.17395979]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.309140s @epoch 8 | mem=6.1787GB
+[debug] Epoch 9 | runtime=0.298316s | peak_mem=6.1787GB | reward=[-11.2096035]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.298316s @epoch 9 | mem=6.1787GB
+[debug] Epoch 10 | runtime=0.289006s | peak_mem=6.1787GB | reward=[-11.24130714]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.289006s @epoch 10 | mem=6.1787GB
+[debug] Epoch 11 | runtime=0.280891s | peak_mem=6.1787GB | reward=[-11.26979019]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.280891s @epoch 11 | mem=6.1787GB
+[debug] Epoch 12 | runtime=0.273734s | peak_mem=6.1787GB | reward=[-11.2955973]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.273734s @epoch 12 | mem=6.1787GB
+[debug] Epoch 13 | runtime=0.267363s | peak_mem=6.1787GB | reward=[-11.31914985]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.267363s @epoch 13 | mem=6.1787GB
+[debug] Epoch 14 | runtime=0.261642s | peak_mem=6.1787GB | reward=[-11.34077993]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.261642s @epoch 14 | mem=6.1787GB
+[debug] Epoch 15 | runtime=0.256467s | peak_mem=6.1787GB | reward=[-11.36075354]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.256467s @epoch 15 | mem=6.1787GB
+[debug] Epoch 16 | runtime=0.251758s | peak_mem=6.1787GB | reward=[-11.37928671]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.251758s @epoch 16 | mem=6.1787GB
+[debug] Epoch 17 | runtime=0.247447s | peak_mem=6.1787GB | reward=[-11.39655711]
+        GPU split : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+        best so far: 0.247447s @epoch 17 | mem=6.1787GB
+==================================================
+[debug] 最优解摘要
+  best_runtime : 0.247447 s  (epoch 17)
+  best_peak_mem: 6.1787 GB
+  nodes        : 1503
+  GPU split    : GPU0=471  GPU1=815  GPU2=1  GPU3=216
+  cross_edges  : 406  cross_bytes=48184.0
+
+========================================
+【TransAware 策略搜索统计】
+总耗时 (Total Search Time): 341.0203 秒
+========================================
+
+[debug] best_placement nodes: 1503
+[debug] GPU split: GPU0=471  GPU1=815  GPU2=1  GPU3=216
+
+real	6m10.805s
+user	1m50.707s
+sys	0m26.019s
+=== GNMT n_devs=4 ===
+open hydmilib:libhydmi.so error, reaseon:libhydmi.so: cannot open shared object file: No such file or directory
+正在读取数据集路径: /root/private_data/lzm/测试hierarchical和transAware/PaperCode/TransAware/transaware/datasets/GNMT/gnmt_baseline.pkl
+
+[TransAware] 开始策略搜索...
+[debug] Epoch 0 | runtime=0.947022s | peak_mem=7.6911GB | reward=[-10.054432961382707]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.947022s @epoch 0 | mem=7.6911GB
+[debug] Epoch 1 | runtime=0.750497s | peak_mem=7.6911GB | reward=[-10.28701939]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.750497s @epoch 1 | mem=7.6911GB
+[debug] Epoch 2 | runtime=0.646443s | peak_mem=7.6911GB | reward=[-10.43627013]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.646443s @epoch 2 | mem=7.6911GB
+[debug] Epoch 3 | runtime=0.580664s | peak_mem=7.6911GB | reward=[-10.54358321]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.580664s @epoch 3 | mem=7.6911GB
+[debug] Epoch 4 | runtime=0.534665s | peak_mem=7.6911GB | reward=[-10.62611494]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.534665s @epoch 4 | mem=7.6911GB
+[debug] Epoch 5 | runtime=0.500331s | peak_mem=7.6911GB | reward=[-10.6924845]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.500331s @epoch 5 | mem=7.6911GB
+[debug] Epoch 6 | runtime=0.473511s | peak_mem=7.6911GB | reward=[-10.74758014]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.473511s @epoch 6 | mem=7.6911GB
+[debug] Epoch 7 | runtime=0.451844s | peak_mem=7.6911GB | reward=[-10.79441758]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.451844s @epoch 7 | mem=7.6911GB
+[debug] Epoch 8 | runtime=0.433885s | peak_mem=7.6911GB | reward=[-10.83497652]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.433885s @epoch 8 | mem=7.6911GB
+[debug] Epoch 9 | runtime=0.418692s | peak_mem=7.6911GB | reward=[-10.87062023]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.418692s @epoch 9 | mem=7.6911GB
+[debug] Epoch 10 | runtime=0.405626s | peak_mem=7.6911GB | reward=[-10.90232387]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.405626s @epoch 10 | mem=7.6911GB
+[debug] Epoch 11 | runtime=0.394235s | peak_mem=7.6911GB | reward=[-10.93080692]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.394235s @epoch 11 | mem=7.6911GB
+[debug] Epoch 12 | runtime=0.384192s | peak_mem=7.6911GB | reward=[-10.95661403]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.384192s @epoch 12 | mem=7.6911GB
+[debug] Epoch 13 | runtime=0.375249s | peak_mem=7.6911GB | reward=[-10.98016657]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.375249s @epoch 13 | mem=7.6911GB
+[debug] Epoch 14 | runtime=0.367219s | peak_mem=7.6911GB | reward=[-11.00179666]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.367219s @epoch 14 | mem=7.6911GB
+[debug] Epoch 15 | runtime=0.359957s | peak_mem=7.6911GB | reward=[-11.02177026]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.359957s @epoch 15 | mem=7.6911GB
+[debug] Epoch 16 | runtime=0.353347s | peak_mem=7.6911GB | reward=[-11.04030343]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.353347s @epoch 16 | mem=7.6911GB
+[debug] Epoch 17 | runtime=0.347297s | peak_mem=7.6911GB | reward=[-11.05757383]
+        GPU split : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+        best so far: 0.347297s @epoch 17 | mem=7.6911GB
+==================================================
+[debug] 最优解摘要
+  best_runtime : 0.347297 s  (epoch 17)
+  best_peak_mem: 7.6911 GB
+  nodes        : 1743
+  GPU split    : GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+  cross_edges  : 82  cross_bytes=46652.0
+
+========================================
+【TransAware 策略搜索统计】
+总耗时 (Total Search Time): 394.6974 秒
+========================================
+
+[debug] best_placement nodes: 1743
+[debug] GPU split: GPU0=217  GPU1=1491  GPU2=1  GPU3=34
+
+real	7m3.999s
+user	2m5.844s
+sys	0m33.671s

@@ -1,0 +1,23 @@
+# ---- Python 运行产物 ----
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.egg-info/
+
+# ---- 核心 dump / 日志大文件 ----
+core.*
+*.core
+
+# ---- FasterTransAware：build 产物与第三方子模块不入仓 ----
+# （build/ 1.7G 为编译产物；3rdparty/ 为外部依赖，可按 .gitmodules 重新拉取）
+PaperCode/FasterTransAware/build/
+PaperCode/FasterTransAware/3rdparty/
+
+# ---- 虚拟环境 ----
+tf_venv/
+venv/
+.venv/
+
+# ---- 本机复现的临时输出（历史 run 输出目录里的新产物除外，见部署指南）----
+*.log.tmp
+.git_local_history/
