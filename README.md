@@ -69,10 +69,11 @@ baseline的实验脚本分别在PaperCode/TransAware/Hierarchical/Trinity/baseli
 
 | 文件 | 说明 |
 |---|---|
-| `统一搜索耗时对比_方法讲解.md` | **先读这个**：结果表 + 四方法讲解 + Hierarchical 600s vs 300s 解释 |
+| `docs/统一搜索耗时对比_方法讲解.md` | **先读这个**：结果表 + 四方法讲解 + Hierarchical 600s vs 300s 解释 |
 | `run_search_time_comparison.sh` | 一键复现四方法搜索耗时（~18 min，CPU 即可） |
-| `统一模型实验执行手册.md` | 全部实验自助手册（真机执行/步时延/故障排查） |
-| `lzm详细解析与TitanV复现.md` | 深度分析：方法解析、统一实验全记录、模拟器取证（§8） |
-| `第四基线迁移同步提示词.md` | 新基线接入统一口径的迁移契约 |
+| `docs/统一模型实验执行手册.md` | 全部实验自助手册（真机执行/步时延/故障排查） |
+| `docs/lzm详细解析与TitanV复现.md` | 深度分析：方法解析、统一实验全记录、模拟器取证（§8） |
+| `docs/第四基线迁移同步提示词.md` | 新基线接入统一口径的迁移契约 |
+| `docs/对比测试hierarchical和transAware性能_云端原始结果_202512.md` | 云端（K100）原始对比数据（600s vs 300s 解释的数据来源） |
 | `hsdag_unified.py` | HSDAG 适配器归档副本（运行请用 /data/coding/HSDAG/ 下原件） |
 | `results_titanv_20261011/` | 本轮全部原始日志（含真机 OOM 双验记录） |

@@ -17,8 +17,10 @@
 │   │   └── Hierarchical/Trinity/  # ★ hierarchical 基线（TensorFlow，TF1 风格）
 │   └── FasterTransAware/          # 方法2（C++/FasterTransformer；build/、3rdparty/ 未入仓，本机不可编译）
 ├── results_local_20261011/        # 海光 DCU 机器（py3.11/torch2.7）的复现日志
-├── 对比测试hierarchical和transAware性能_云端原始结果_202512.md   # 云端 2025-12 原始对比
-├── 部署与运行指南_TitanV.md       # 他们自己写的 Titan V 部署指南（本机照此执行）
+├── results_titanv_20261011/       # 本机 8×Titan V 全部实验日志（统一实验原始记录）
+├── docs/                          # 全部文档：方法讲解 / 执行手册 / 本文件 / 迁移契约 / 云端原始结果
+├── hsdag_unified.py               # HSDAG 适配器归档副本（原件在 /data/coding/HSDAG/）
+├── run_search_time_comparison.sh  # 四方法统一搜索耗时一键脚本
 └── README.md                      # 数据集与实验入口索引
 ```
 
@@ -226,7 +228,7 @@ cd /data/coding/lzm/PaperCode/TransAware/Hierarchical/Trinity
 
 ## 八、统一模型对比实验：BERT-Huge @ 8×Titan V（2026-10-11）★ 核心实验
 
-> 📖 **可执行手册**：`/data/coding/lzm/统一模型实验执行手册.md`——不熟悉环境也能照着逐步复现
+> 📖 **可执行手册**：`/data/coding/lzm/docs/统一模型实验执行手册.md`——不熟悉环境也能照着逐步复现
 > 全部实验（搜索耗时对比 / placement 真机执行 / 步时延实测 / 原始模型口径 / 故障排查）。
 
 ### 8.1 实验设计（同一张图、同一协议、真机执行）
