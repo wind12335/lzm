@@ -255,7 +255,7 @@ cd /data/coding/lzm/PaperCode/TransAware/Hierarchical/Trinity
 | **Galvatron 8G full** | **174.44 s**（32L 实测） | 预测吞吐 8.53 samples/s | **1.321 s**（7023MB 实测） | ✅ 唯一可行，较均匀放置 **−27.1%** |
 | Galvatron pp8（手工纯流水） | — | — | 0.883 s（7127MB） | ✅ −51.2%（本机拓扑下最优） |
 | Galvatron tp8 / dp8 / 12G | 41.6–212 s | — | 2.230 s / −10 / −10(OOM) | 参照 |
-| **TransAware** | 1.17 s | 30.21 s @ep17（含 epoch 重缩放的构造性假象） | **−10（真机 OOM）** | ❌ 不可行 |
+| **TransAware** | 1.17 s（默认 18 轮）/ **104.97 s**（3600 轮重载，正式口径） | 30.21 s @ep17（含 epoch 重缩放的构造性假象） | **−10（真机 OOM）** | ❌ 不可行 |
 | **Hierarchical（Trinity）** | **679.74 s** | 1.827 s（×1e6 修正后，见 8.4） | **−10（真机 OOM）** | ❌ 不可行 |
 | **HSDAG（NeurIPS'24，方案 A 移植）** | **129.38 s**（170 eps 重载配置） | 1.812 s（统一模拟器口径） | **−10（真机 OOM）** | ❌ 不可行 |
 | 均匀放置 4L/GPU（无搜索基准） | 0 | — | 1.810 s | placement 族结构上限 |

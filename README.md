@@ -90,6 +90,8 @@ baseline的实验脚本分别在PaperCode/TransAware/Hierarchical/Trinity/baseli
 
 TransAware 与 Trinity 的代码在仓库本体 `PaperCode/` 下（见上方"代码注解"）。
 
+## 文件索引（统一实验）
+
 | 文件 | 说明 |
 |---|---|
 | `docs/统一搜索耗时对比_方法讲解.md` | **先读这个**：结果表 + 四方法讲解 + Hierarchical 600s vs 300s 解释 |
